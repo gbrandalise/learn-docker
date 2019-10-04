@@ -35,3 +35,10 @@ pull = baixa uma imagem de um repositório público ou privado
 <IMAGE_NAME> = nome da imagem a ser baixada
 
 [TAG] = tag opcional atribuída a imagem a ser baixada, geralmente a versão da imagem
+
+### Inspecionando informações de um container
+`docker inspect <CONTAINER_NAME>`
+
+inspect = inspeciona informações do container
+
+<CONTAINER_NAME> = nome do container a ser inspecionado
