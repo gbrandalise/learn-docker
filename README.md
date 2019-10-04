@@ -1,9 +1,13 @@
 # learn-docker
 
-## Criando container
-`docker run <IMAGE_NAME>`
+## CLI
+`docker version`
 
 docker = comando padrão do cli
+version = exibe a versão do cli e do daemon do docker
+
+### Criando container
+`docker run <IMAGE_NAME>`
 
 run = comando para criar um container
 
@@ -11,11 +15,14 @@ run = comando para criar um container
 
 ex.: `docker run hello-world`
 
-## Listando containers
+### Listando containers
 `docker ps [-a]`
-
-docker = comando padrão do cli
 
 ps = comando para listar os containers
 
 [-a] = parâmetro opcional para listar todos os containers incusive os que estão parados
+
+### Listando imagens
+`docker images`
+
+images = exibe as imagens do repositório local
