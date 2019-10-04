@@ -13,7 +13,7 @@ version = exibe a versão do cli e do daemon do docker
 <CONTAINER_NAME> = nome do container
 
 ### Criando container
-`docker run -d --name <CONTAINER_NAME> [-p] [HOST_PORT]:[CONTAINER_PORT] [--link] [<ANOTHER_CONTAINER_NAME>] <IMAGE_NAME>:[TAG]`
+`docker run -d --name <CONTAINER_NAME> [-p] [HOST_PORT]:[CONTAINER_PORT] [--link] [<ANOTHER_CONTAINER_NAME>] [-v] [HOST_PATH]:[CONTAINER_PATH] <IMAGE_NAME>:[TAG]`
 
 run = comando para criar um container
 
@@ -31,7 +31,13 @@ run = comando para criar um container
 
 [ANOTHER_COTNAINER_NAME] = nome do outro container que ficará acessível
 
-ex.: `docker run -d --name primeiro_container -p 38080:8080 tomcat:latest`
+[-v] = flag usada para mapear diretórios expostos pela imagem para o host
+
+[HOST_PATH] = diretório que será mapeado no host
+
+[CONTAINER_PATH] = diretório no container que é exposto pela imagem e que será usado para mapear em um diretório no host
+
+ex.: `docker run -d --name primeiro_container -p 38080:8080 -v c:\Users\admin\tomcat_logs:/home/tomcat/webapps tomcat:latest`
 
 ### Listando containers
 `docker ps [-a]`
@@ -126,14 +132,14 @@ ex.: docker rmi ubuntu:18.06
 
 Dockerfile = arquivo usado para executar vários comandos e ao final criar imagens configuradas conforme a necessidade
 
-## FROM
+### FROM
 `FROM <IMAGE_NAME>:[TAG]`
 
 FROM = comando do Dockerfile qeu indica qual imagem será usada como base para a criação da nova imagem
 
 ex.: FROM tomcat:8.0
 
-## MAINTAINER
+### MAINTAINER
 `MAINTAINER <EMAIL>`
 
 MAINTAINER = comando usado para indicar o e-mail do mantenedor dessa imagem
@@ -142,7 +148,7 @@ MAINTAINER = comando usado para indicar o e-mail do mantenedor dessa imagem
 
 ex.: MAINTAINER giovanny.brandalise@gmail.com
 
-## RUN
+### RUN
 `RUN <COMMAND>`
 
 RUN = comando usado para executar comandos dentro da imagem antes de gerar a nova imagem, pode-se ter vários comandos RUN em um mesmo Dockerfile intercalados com outros comandos
@@ -152,3 +158,11 @@ RUN = comando usado para executar comandos dentro da imagem antes de gerar a nov
 ex.: RUN mkdir /var/www
     RUN echo "testando echo"
     
+### VOLUME
+`VOLUME <PATH>`
+
+VOLUME = comando usado para expor um diretório da imagem para ser mapeada pelos containers
+
+<PATH> = diretório que será exposto pela imagem
+    
+ex.: VOLUMNE /var/www
