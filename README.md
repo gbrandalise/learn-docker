@@ -127,6 +127,15 @@ rmi = removendo uma imagem
 
 ex.: docker rmi ubuntu:18.06
 
+### Criando imagem a partir de um Dockerfile
+`docker build [-t] [IMAGE_NAME]:[TAG] <DOCKERFILE_PATH>`
+
+build = comando usado para criar uma imagem a partir de um Dockerfile
+
+[-t] = flag opcional para indicar o nome e a tag da imagem a ser criada
+
+<DOCKERFILE_PATH> = diretório em que se encontra o Dockerfile, pode-se usar . (ponto) se o arquivo estiver no diretório atual
+
 
 ## Dockerfile
 
