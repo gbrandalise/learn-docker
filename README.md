@@ -175,3 +175,12 @@ EXPOSE = comando usado para expor portas da imagem a serem mapeadas pelos contai
 <PORT1> <PORT2> = portas que serão expostas pela imagem
     
 ex.: EXPOSE 80 8080
+
+### WORKDIR
+`WORKDIR <PATH>`
+
+WORKDIR = comando usado para indicar o diretório inicial da imagem que serão executados os comandos
+
+<PATH> = diretório inicial da imagem
+    
+ex.: WORKDIR /var/www
