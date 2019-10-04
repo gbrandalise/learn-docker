@@ -143,6 +143,13 @@ history = exibe o histórico de comandos executados em uma imagem
 
 ex.: docker history tomcat:latest
 
+### Executar comandos dentro de um container
+`docker exec <CONTAINER_NAME> <COMMAND>`
+
+exec = executa um comando dentro de um container
+
+ex.: docker exec meu_tomcat cat test.txt
+
 
 ## Dockerfile
 
