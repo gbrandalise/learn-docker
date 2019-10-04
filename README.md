@@ -64,3 +64,8 @@ ex.: docker start artifactory
 `docker attach <CONTAINER_NAME>`
 
 attach = entra em um container
+
+### Exibir alterações realizadas em um container
+`docker diff <CONTAINER_NAME>`
+
+diff = exibe as alterações realizadas no container
