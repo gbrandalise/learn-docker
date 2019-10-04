@@ -46,3 +46,22 @@ inspect = inspeciona informações do container
 <CONTAINER_NAME> = nome do container a ser inspecionado
 
 ex.: docker inspect container_apache
+
+### Parar um container
+`docker stop <CONTAINER_NAME>`
+
+stop = parar um container
+
+<CONTAINER_NAME> = nome do container
+
+ex.: docker stop apache
+
+### Iniciar um container
+`docker start <CONTAINER_NAME>`
+
+start = iniciar um container
+
+<CONTAINER_NAME> = nome do container
+
+ex.: docker start artifactory
+
