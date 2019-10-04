@@ -76,3 +76,14 @@ diff = exibe as alterações realizadas no container
 <COMMAND> = comando do docker cli
 
 --help = exibe o help do comando
+
+### Criando uma imagem a partir de um container
+`docker commit <CONTAINER_NAME> <NEW_IMAGE_NAME>:[TAG]`
+
+commit = commita uma imagem a partir de um container
+
+<CONTAINER_NAME> = container base para criação da imagem
+
+<NEW_IMAGE_NAME> = nome da imagem que será criada
+
+[TAG] = opcionalmente pode-se passar uma tag para a imagem, geralmente a versão
