@@ -9,12 +9,17 @@ version = exibe a versão do cli e do daemon do docker
 ### Parâmetros padrões
 
 <IMAGE_NAME> = nome da imagem
+[TAG] = parâmetro opcional da tag atribuída a imagem, geralmente a versão
 <CONTAINER_NAME> = nome do container
 
 ### Criando container
-`docker run <IMAGE_NAME>`
+`docker run -d --name <CONTAINER_NAME> <IMAGE_NAME>:[TAG]`
 
 run = comando para criar um container
+
+-d = roda o container em background
+
+--name = flag para indicar o nome do container que será criado
 
 ex.: `docker run hello-world`
 
@@ -34,8 +39,6 @@ images = exibe as imagens do repositório local
 `docker pull <IMAGE_NAME>:[TAG]`
 
 pull = baixa uma imagem de um repositório público ou privado
-
-[TAG] = tag opcional atribuída a imagem a ser baixada, geralmente a versão da imagem
 
 ex.: docker pull ubuntu:18.04
 
@@ -85,5 +88,3 @@ commit = commita uma imagem a partir de um container
 <CONTAINER_NAME> = container base para criação da imagem
 
 <NEW_IMAGE_NAME> = nome da imagem que será criada
-
-[TAG] = opcionalmente pode-se passar uma tag para a imagem, geralmente a versão
