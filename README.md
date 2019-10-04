@@ -36,9 +36,13 @@ pull = baixa uma imagem de um repositório público ou privado
 
 [TAG] = tag opcional atribuída a imagem a ser baixada, geralmente a versão da imagem
 
+ex.: docker pull ubuntu:18.04
+
 ### Inspecionando informações de um container
 `docker inspect <CONTAINER_NAME>`
 
 inspect = inspeciona informações do container
 
 <CONTAINER_NAME> = nome do container a ser inspecionado
+
+ex.: docker inspect container_apache
