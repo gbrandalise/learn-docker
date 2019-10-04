@@ -31,7 +31,7 @@ run = comando para criar um container
 
 [ANOTHER_COTNAINER_NAME] = nome do outro container que ficará acessível
 
-ex.: `docker run -d --name primeiro_container hello-world:latest`
+ex.: `docker run -d --name primeiro_container -p 38080:8080 tomcat:latest`
 
 ### Listando containers
 `docker ps [-a]`
@@ -120,3 +120,16 @@ ex.: docker rm meu_container
 rmi = removendo uma imagem
 
 ex.: docker rmi ubuntu:18.06
+
+
+## Dockerfile
+
+Dockerfile = arquivo usado para executar vários comandos e ao final criar imagens configuradas conforme a necessidade
+
+## FROM
+`FROM <IMAGE_NAME>:[TAG]`
+
+FROM = comando do Dockerfile qeu indica qual imagem será usada como base para a criação da nova imagem
+
+ex.: FROM tomcat:8.0
+
