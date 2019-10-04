@@ -159,10 +159,19 @@ ex.: RUN mkdir /var/www
     RUN echo "testando echo"
     
 ### VOLUME
-`VOLUME <PATH>`
+`VOLUME <PATH1> <PATH2>`
 
-VOLUME = comando usado para expor um diretório da imagem para ser mapeada pelos containers
+VOLUME = comando usado para expor diretórios da imagem para serem mapeados pelos containers
 
-<PATH> = diretório que será exposto pela imagem
+<PATH1> <PATH2> = diretórios que serão expostos pela imagem
     
 ex.: VOLUMNE /var/www
+
+### EXPOSE
+`EXPOSE <PORT1> <PORT2>`
+
+EXPOSE = comando usado para expor portas da imagem a serem mapeadas pelos containers
+
+<PORT1> <PORT2> = portas que serão expostas pela imagem
+    
+ex.: EXPOSE 80 8080
