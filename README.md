@@ -69,3 +69,10 @@ attach = entra em um container
 `docker diff <CONTAINER_NAME>`
 
 diff = exibe as alterações realizadas no container
+
+### Exibir help de um comando
+`docker <COMMAND> --help`
+
+<COMMAND> = comando do docker cli
+
+--help = exibe o help do comando
