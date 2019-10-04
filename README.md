@@ -136,6 +136,13 @@ build = comando usado para criar uma imagem a partir de um Dockerfile
 
 <DOCKERFILE_PATH> = diretório em que se encontra o Dockerfile, pode-se usar . (ponto) se o arquivo estiver no diretório atual
 
+### Exibir histório de comandos de uma imagem
+`docker history <IMAGE_NAME>`
+
+history = exibe o histórico de comandos executados em uma imagem
+
+ex.: docker history tomcat:latest
+
 
 ## Dockerfile
 
