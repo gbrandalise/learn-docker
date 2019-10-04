@@ -26,3 +26,12 @@ ps = comando para listar os containers
 `docker images`
 
 images = exibe as imagens do repositório local
+
+### Baixando uma imagem
+`docker pull <IMAGE_NAME>:[TAG]`
+
+pull = baixa uma imagem de um repositório público ou privado
+
+<IMAGE_NAME> = nome da imagem a ser baixada
+
+[TAG] = tag opcional atribuída a imagem a ser baixada, geralmente a versão da imagem
