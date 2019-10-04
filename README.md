@@ -133,3 +133,22 @@ FROM = comando do Dockerfile qeu indica qual imagem será usada como base para a
 
 ex.: FROM tomcat:8.0
 
+## MAINTAINER
+`MAINTAINER <EMAIL>`
+
+MAINTAINER = comando usado para indicar o e-mail do mantenedor dessa imagem
+
+<EMAIL> = e-mail do mantenedor
+
+ex.: MAINTAINER giovanny.brandalise@gmail.com
+
+## RUN
+`RUN <COMMAND>`
+
+RUN = comando usado para executar comandos dentro da imagem antes de gerar a nova imagem, pode-se ter vários comandos RUN em um mesmo Dockerfile intercalados com outros comandos
+
+<COMMAND> = comando que será executado dentro da imagem
+
+ex.: RUN mkdir /var/www
+    RUN echo "testando echo"
+    
