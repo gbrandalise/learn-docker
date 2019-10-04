@@ -13,13 +13,23 @@ version = exibe a versão do cli e do daemon do docker
 <CONTAINER_NAME> = nome do container
 
 ### Criando container
-`docker run -d --name <CONTAINER_NAME> <IMAGE_NAME>:[TAG]`
+`docker run -d --name <CONTAINER_NAME> [-p] [HOST_PORT]:[CONTAINER_PORT] [--link] [<ANOTHER_CONTAINER_NAME>] <IMAGE_NAME>:[TAG]`
 
 run = comando para criar um container
 
 -d = roda o container em background
 
 --name = flag para indicar o nome do container que será criado
+
+[-p] = flag opcional para mapear as portas expostas pelo container com portas do host (podem ser substituidos por apenas -P maiúsculo, indicando que todas as portas expostas pelo container serão mapeadas para as mesmas portas no host)
+
+[HOST_PORT] = porta do host que responderá pela porta do container
+
+[CONTAINER_PORT] = porta exposta do container que será mapeada na porta do host
+
+[--link] = flag usada para indicar links entre os containers, para que um possa enxergar o outro
+
+[ANOTHER_COTNAINER_NAME] = nome do outro container que ficará acessível
 
 ex.: `docker run -d --name primeiro_container hello-world:latest`
 
