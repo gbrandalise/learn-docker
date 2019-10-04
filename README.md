@@ -21,7 +21,7 @@ run = comando para criar um container
 
 --name = flag para indicar o nome do container que será criado
 
-ex.: `docker run hello-world`
+ex.: `docker run -d --name primeiro_container hello-world:latest`
 
 ### Listando containers
 `docker ps [-a]`
@@ -68,10 +68,14 @@ ex.: docker start artifactory
 
 attach = entra em um container
 
+ex.: docker attach debian
+
 ### Exibir alterações realizadas em um container
 `docker diff <CONTAINER_NAME>`
 
 diff = exibe as alterações realizadas no container
+
+ex.: docker diff tomcat
 
 ### Exibir help de um comando
 `docker <COMMAND> --help`
@@ -79,6 +83,8 @@ diff = exibe as alterações realizadas no container
 <COMMAND> = comando do docker cli
 
 --help = exibe o help do comando
+
+ex.: docker run --help
 
 ### Criando uma imagem a partir de um container
 `docker commit <CONTAINER_NAME> <NEW_IMAGE_NAME>:[TAG]`
@@ -88,3 +94,19 @@ commit = commita uma imagem a partir de um container
 <CONTAINER_NAME> = container base para criação da imagem
 
 <NEW_IMAGE_NAME> = nome da imagem que será criada
+
+ex.: docker commit apache/minha_imagem apache
+
+### Removendo um container
+`docker rm <CONTAINER_NAME>`
+
+rm = removendo um container
+
+ex.: docker rm meu_container
+
+### Removendo uma imagem
+`docker rmi <IMAGE_NAME>:[TAG]`
+
+rmi = removendo uma imagem
+
+ex.: docker rmi ubuntu:18.06
