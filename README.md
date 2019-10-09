@@ -213,6 +213,10 @@ ex.: WORKDIR /var/www
 
 COPY = comando usado para copiar diretórios e arquivos para dentro da imagem que será criada
 
+<HOST_PATH> = diretório/arquivo origem do host que será copiado
+
+<IMAGE_PATH> = diretório destino do diretório/arquivo dentro da imagem que será criada
+
 ex.: COPY C:\Users\admin\run.sh /home/admin/app/
 
 ### ENV
@@ -220,4 +224,17 @@ ex.: COPY C:\Users\admin\run.sh /home/admin/app/
 
 ENV = comando usado para criar variáveis de ambiente e/ou atribuir valor a elas
 
+<ENV_VAR> = nome da variável de ambiente
+
+<ENV_VALUE> = valor atribuído à variável
+
 ex.: ENV MYSQL_HOME=/opt/tools/mysql
+
+### ENTRYPOINT
+`ENTRYPOINT ["<COMMAND>"]`
+
+ENTRYPOINT = comando que será executado quando iniciar o container baseado na imagem que será criada
+
+<COMMAND> = comando que será executado ao iniciar o container
+
+ex.: ENTRYPOINT ["/home/admin/run.sh"]
