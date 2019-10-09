@@ -214,3 +214,10 @@ ex.: WORKDIR /var/www
 COPY = comando usado para copiar diretórios e arquivos para dentro da imagem que será criada
 
 ex.: COPY C:\Users\admin\run.sh /home/admin/app/
+
+### ENV
+`ENV <ENV_VAR>=<ENV_VALUE>`
+
+ENV = comando usado para criar variáveis de ambiente e/ou atribuir valor a elas
+
+ex.: ENV MYSQL_HOME=/opt/tools/mysql
