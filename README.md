@@ -207,3 +207,10 @@ WORKDIR = comando usado para indicar o diretório inicial da imagem que serão e
 <PATH> = diretório inicial da imagem
     
 ex.: WORKDIR /var/www
+
+### COPY
+`COPY <HOST_PATH> <IMAGE_PATH>`
+
+COPY = comando usado para copiar diretórios e arquivos para dentro da imagem que será criada
+
+ex.: COPY C:\Users\admin\run.sh /home/admin/app/
