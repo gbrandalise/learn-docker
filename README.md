@@ -150,6 +150,35 @@ exec = executa um comando dentro de um container
 
 ex.: docker exec meu_tomcat cat test.txt
 
+### Logar no docker hub ou repositório privado
+`docker login`
+
+login = solicita login em uma conta de um repositório de imagens como o docker hub
+
+### Tagueando uma imagem para ser publicada
+`docker tag <IMAGE_NAME> <LOGIN>/<IMAGE_NAME>:[TAG]`
+
+tag = adiciona uma tag a uma imagem pré-criada no repositório local
+
+<IMAGE_NAME> = nome da imagem que será tagueada
+
+<LOGIN> = por convenção é usado o login do docker hub antes do nome da imagem para indicar o criador da mesma
+    
+[TAG] = parâmetro não obrigatório, caso nao seja passado será tagueada como :latest
+
+ex.: docker tag my_image gigiobr/my_image
+
+### Publicando uma imagem em um repositório
+`docker push <LOGIN>/<IMAGE_NAME>:[TAG]`
+
+push = publica uma imagem em um repositório
+
+<LOGIN> = por convenção é usado o login do docker hub no nome da imagem
+    
+<IMAGE_NAME> = nome da imagem a ser publicada
+
+[TAG] = parametro opcional, caso nao seja passado será usada a tag :latest
+
 
 ## Dockerfile
 
