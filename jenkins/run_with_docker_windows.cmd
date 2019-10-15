@@ -1,0 +1,1 @@
+docker run -itd --name jenkins -v /var/run/docker.sock:/var/run/docker.sock -v "D:\\Gigio\\workspace\\repositories\\github\\gbrandalise\\jenkins\\home:/var/jenkins_home" -v "C:\\Program Files\\Docker\\Docker\\resources\\bin\\docker.exe:/usr/bind/docker" -p 38080:8080 -p 50000:50000 -u root gigiobr/jenkins:1.0
