@@ -1,0 +1,32 @@
+version: '3'
+services:
+  sonarqube-database:
+    build: .
+    restart: always
+    ports:
+      - 35432:5432
+    environment:
+      - POSTGRES_USER=sonar
+      - POSTGRES_PASSWORD=brq123
+      - POSTGRES_DB=sonar
+
+  sonarqube:
+    image: sonarqube
+    restart: always
+    ports:
+      - "39000:9000"
+    volumes:
+      - /home/admin/vol_sonarqube/conf:/opt/sonarqube/conf
+      - /home/admin/vol_sonarqube/data:/opt/sonarqube/data
+      - /home/admin/vol_sonarqube/extensions:/opt/sonarqube/extensions
+    environment:
+      - SONARQUBE_JDBC_USERNAME=sonar
+      - SONARQUBE_JDBC_PASSWORD=brq123
+      - SONARQUBE_JDBC_URL=jdbc:postgresql://sonarqube-database/sonar
+    depends_on:
+      - sonarqube-database
+
+networks:
+  default:
+    external:
+      name: smart_dev_network
