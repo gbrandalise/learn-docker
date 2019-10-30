@@ -25,8 +25,5 @@ services:
       - SONARQUBE_JDBC_URL=jdbc:postgresql://sonarqube-database/sonar
     depends_on:
       - sonarqube-database
-
-networks:
-  default:
-    external:
-      name: smart_dev_network
+    links:
+      - sonarqube-database
